@@ -1,6 +1,24 @@
 # Mini-File-System
 The practice implements a file system (based on Unix ext2) on a virtual disk (file), the file management module of the operating system and the interaction of user processes.
 
+
+<img width="625" alt="Captura de pantalla 2023-11-20 a las 8 45 41" src="https://github.com/maribel95/Mini-File-System/assets/61268027/e205888f-58e1-472b-8754-6de0b678ca18">
+
+
+## Structure
+
+The practice will be composed of the following elements:
+- A set of libraries, divided into levels, that will provide the functionality to the primitives to access the file system and manage it.
+- A mi_mkfs program to create, with the help of these libraries, the file system on the disk.
+- The file system (SF) will actually be contained in a file (simulating a secondary memory device), which we will call disk and has the following structure:
+  <img width="480" alt="Captura de pantalla 2023-11-20 a las 9 02 43" src="https://github.com/maribel95/Mini-File-System/assets/61268027/393eb76b-f0a6-4401-ac7c-d7cd0ec275fa">
+
+- A set of programs to operate via console, including one that displays the contents of a file on the screen (mi_cat), one that changes its access permissions (mi_chmod), one that creates physical links (mi_ln), one that lists directories (mi_ls), one that deletes files and directories (mi_rm), and one that shows the meta information of a file (mi_stat).
+  -  Its operation is similar to the basic operation of the corresponding GNU/Linux programs cat, chmod, ln, ls, rm/rmdir, stat.
+- A simulator program in charge of creating test processes that concurrently access the file system (using a mutex semaphore) so that the correct functioning of the aforementioned libraries can be verified.
+
+
+## Requirements
 - The file system is hierarchical, with a tree structure of directories and files, but you can also create physical links, which will actually turn it into a graph.
   
 - The file system is indexed allocation (128-byte inodes with 12 direct pointers, 1 single indirect pointer, 1 double indirect pointer and 1 triple indirect pointer).
