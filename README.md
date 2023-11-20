@@ -50,3 +50,19 @@ The practice will be composed of the following elements:
 - **mi_touch()**: Update the timestamps of an existing file or to create an empty file if it does not exist.
 - **mi_rmdir()**: Removes empty directories.
 - **mi_rm_r()**: Removes directories and their contents recursively.
+
+
+## Memory management:
+
+File management will be done using a dynamic structure composed of inodes.
+
+
+An inode (index node) is a data structure in Unix-type file systems and similar operating systems. Inodes store information about files and directories in a file system, excluding the file name and the location of the file's content itself. Each file or directory in the file system is associated with a unique inode, and this inode contains important metadata about the file or directory.
+
+Here is an example of how file system memory is managed using this data structure:
+
+<img width="668" alt="Captura de pantalla 2023-11-20 a las 9 37 50" src="https://github.com/maribel95/Mini-File-System/assets/61268027/907f3f96-367e-4da8-ab7a-26b3d488bda2">
+
+Internally, pointers are used to access each block of memory.
+
+<img width="668" alt="Captura de pantalla 2023-11-20 a las 9 37 18" src="https://github.com/maribel95/Mini-File-System/assets/61268027/83af0f6a-8314-4a79-969b-1d8137ac2840">
