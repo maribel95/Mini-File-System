@@ -11,6 +11,8 @@ The practice will be composed of the following elements:
 - A set of libraries, divided into levels, that will provide the functionality to the primitives to access the file system and manage it.
 - A mi_mkfs program to create, with the help of these libraries, the file system on the disk.
 - The file system (SF) will actually be contained in a file (simulating a secondary memory device), which we will call disk and has the following structure:
+
+  
   <img width="480" alt="Captura de pantalla 2023-11-20 a las 9 02 43" src="https://github.com/maribel95/Mini-File-System/assets/61268027/393eb76b-f0a6-4401-ac7c-d7cd0ec275fa">
 
 - A set of programs to operate via console, including one that displays the contents of a file on the screen (mi_cat), one that changes its access permissions (mi_chmod), one that creates physical links (mi_ln), one that lists directories (mi_ls), one that deletes files and directories (mi_rm), and one that shows the meta information of a file (mi_stat).
